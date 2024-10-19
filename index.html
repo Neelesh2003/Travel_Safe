@@ -15,43 +15,14 @@
       <a href="#">Home</a>
       <a href="#">About Us</a>
       <a href="#">Safety Tips</a>
-      <a href="#">Shortest & Safest Path</a>
-      <a href="#">Place Ratings</a>
+      <a href="Safe_Map.html">Shortest & Safest Path</a>
+      <a href="Crime_index.html">Place Ratings</a>
       <a href="#">Contact</a>
     </nav>
     <div class="auth-buttons">
       <span id="auth-options"></span>
     </div>
   </header>
-
-  <!-- Script for handling login state -->
-  <script>
-    // Retrieve the stored username from local storage
-    const storedUsername = localStorage.getItem('loggedInUser');
-    const authOptions = document.getElementById('auth-options');
-
-    if (storedUsername) {
-      authOptions.innerHTML = `
-        <span>Welcome, ${storedUsername}</span>
-        <button onclick="logout()">Logout</button>
-      `;
-    } else {
-      // If no user is logged in, display Login and Register buttons
-      authOptions.innerHTML = `
-        <button onclick="window.location.href='login_Page.html'">Login</button>
-        <button onclick="window.location.href='register.html'">Register</button>
-      `;
-    }
-
-    // Logout function
-    function logout() {
-      // Clear the stored username from local storage
-      localStorage.removeItem('loggedInUser');
-      
-      // Redirect to the login page
-      window.location.href = 'login_Page.html';
-    }
-  </script>
 
   <!-- Hero Section -->
   <div class="hero">
@@ -67,19 +38,21 @@
   <section class="features">
     <div class="feature">
       <a href="Safe_Map.html">
-      <h3>Shortest & Safest Path Finder</h3>
-    </a>
-      <p>Get the safest routes based on real-time data.</p>
+        <img src="/images/Location.png" alt="Shortest & Safest Path Finder" style="width: 65%; height: 80%;">
+        <br> Shortest & Safest Path
+      </a>
     </div>
     <div class="feature">
       <a href="Crime_index.html">
-        <h3>Place Crime Ratings</h3>
+        <img src="/images/crime rate.png" alt="Place Crime Ratings" style="width: 65%; height: 80%;">
+        <br> Check Crime Rate
       </a>
-      <p>Check safety ratings of places before visiting.</p>
     </div>
     <div class="feature">
-      <h3>Emergency Response Features</h3>
-      <p>Emergency button connects you to local authorities instantly.</p>
+      <a href="Bot_index.html">
+        <img src="/images/Bot.jpg" alt="Your Personal Assistant" style="width: 65%; height: 80%;">
+        <br> Your Personal Assistant
+      </a>
     </div>
   </section>
 
@@ -105,5 +78,6 @@
     <p>&copy; 2024 TravelSafe. All rights reserved.</p>
     <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
   </footer>
+  <script src="index_Script.js"></script>
 </body>
 </html>
