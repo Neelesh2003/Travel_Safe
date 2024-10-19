@@ -2,7 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1D1E22;
+    /* background-color: black; */
+    background-image: url("/images/Map_bg.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,11 +17,12 @@ body {
 }
 .center-box {
     width: 90%;
-    width: 500px;
+    width: 520px;
     max-width: 400px;
-    height: 450px;
+    height: 530px;
     margin: 20px 0;
     position: relative;
+    /* background-color: white; */
 }
 
 .animated-border-box, .animated-border-box-glow {
@@ -59,7 +62,7 @@ body {
     left: 5px;
     width: calc(100% - 10px);
     height: calc(100% - 10px);
-    background: #292a2e;
+    background: white; 
     border-radius: 7px;
 }
 
@@ -68,7 +71,7 @@ body {
     z-index: 1;
     text-align: center;
     padding: 20px;
-    color: grey;
+    color: blue;
 }
 
 input {
