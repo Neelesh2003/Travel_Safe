@@ -21,6 +21,6 @@
         localStorage.removeItem('loggedInUser');
         
         // Redirect to the login page
-        window.location.href = '/Travel_Safe/Templates/login_Page.html';
+        window.location.href = 'login_Page.html';
     }
 

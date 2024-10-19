@@ -14,7 +14,7 @@ function registerUser() {
   localStorage.setItem(username, JSON.stringify(userData));
 
   alert('Registration successful! Redirecting to login page...');
-  window.location.href = '/Travel_Safe/Templates/login_Page.html'; // Redirect to login page
+  window.location.href = 'login_Page.html'; // Redirect to login page
 
   return false; 
 }

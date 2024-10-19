@@ -18,14 +18,14 @@ function loginUser() {
           localStorage.setItem('loggedInUser', username);
 
           // Redirect to the main map page after successful login
-          window.location.href = '/Travel_Safe/Templates/index.html';
+          window.location.href = 'index.html';
           return false; 
       } else {
           alert('Incorrect password. Please try again.');
       }
   } else {
       alert('Username does not exist. Please register first.');
-      window.location.href = '/Travel_Safe/Templates/register_page.html'; // Redirect to registration page
+      window.location.href = 'register_page.html'; // Redirect to registration page
   }
 
   return false; 
