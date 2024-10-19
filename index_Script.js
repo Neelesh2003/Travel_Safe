@@ -10,8 +10,8 @@
     } else {
         // If no user is logged in, display Login and Register buttons
         authOptions.innerHTML = `
-            <button onclick="window.location.href='login_Page.html'">Login</button>
-            <button onclick="window.location.href='register_page.html'">Register</button>
+            <button onclick="window.location.href='/Travel_Safe/Templates/login_Page.html'>Login</button>
+            <button onclick="window.location.href='/Travel_Safe/Templates/register_page.html'>Register</button>
         `;
     }
 
@@ -21,6 +21,6 @@
         localStorage.removeItem('loggedInUser');
         
         // Redirect to the login page
-        window.location.href = 'login_Page.html';
+        window.location.href = '/Travel_Safe/Templates/login_Page.html';
     }
 
