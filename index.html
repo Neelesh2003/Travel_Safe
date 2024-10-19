@@ -31,7 +31,6 @@
     const authOptions = document.getElementById('auth-options');
 
     if (storedUsername) {
-      // If the user is logged in, display their username and logout option
       authOptions.innerHTML = `
         <span>Welcome, ${storedUsername}</span>
         <button onclick="logout()">Logout</button>
@@ -67,7 +66,9 @@
   <!-- Core Features Section -->
   <section class="features">
     <div class="feature">
+      <a href="Safe_Map.html">
       <h3>Shortest & Safest Path Finder</h3>
+    </a>
       <p>Get the safest routes based on real-time data.</p>
     </div>
     <div class="feature">
