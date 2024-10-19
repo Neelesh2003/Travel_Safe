@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Travel-Safe</title>
     <link rel="stylesheet" href="login_Style.css">
-    
 </head>
 <body>
     <header>
         <h1>Travel_Safe</h1>
         <nav>
-          <a href="index.html">Home</a>
           <a href="register.html">Register</a>
         </nav>
-      </header>
-      
-      <section class="contact">
+    </header>
+    
+    <section class="contact">
         <h3>Login</h3>
         <form id="login-form" onsubmit="return loginUser();">
           <input type="text" placeholder="Username" id="username" required>
           <input type="password" placeholder="Password" id="password" required>
           <button type="submit">Login</button>
         </form>
-      </section>
-</body>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    <script src="login_Script.js"></script>
+    <script>
+        function loginUser() {
+            const username = document.getElementById('username').value;
+
+            // Store the username in local storage
+            localStorage.setItem('loggedInUser', username);
+
+            // Redirect to the main page after successful login
+            window.location.href = 'index.html';
+            return false; // Prevent the default form submission
+        }
+    </script>
 </body>
 </html>
