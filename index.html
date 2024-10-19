@@ -5,83 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Women's Safety Travel | Home</title>
   <link rel="stylesheet" href="index_Style.css">
-  
 </head>
 
-<!-- Header -->
-
-<header>
-  <h1>Travel-Safe</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Safety Tips</a>
-    <a href="#">Shortest & Safest Path</a>
-    <a href="#">Place Ratings</a>
-    <a href="#">Contact</a>
-  </nav>
-  <div class="auth-buttons">
-    <button onclick="window.location.href='login_Page.html'">Login</button>
-    <button onclick="window.location.href='register_page.html'">Register</button>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>Your Safety, Our Priority</h2>
-    <p>Providing real-time safety updates and shortest & safest routes for women travelers</p>
-    <button class="cta-btn">Explore Now</button>
-  </div>
-</div>
-
- <!-- Core Features Section -->
- 
-<section class="features">
-  <div class="feature">
-    <h3>Shortest & Safest Path Finder</h3>
-    <p>Get the safest routes based on real-time data.</p>
-  </div>
-  <div class="feature">
 <body>
-  <style>
-    a {
-        text-decoration: none; /* Remove underline from all links */
+  <!-- Header -->
+  <header>
+    <h1>Travel-Safe</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Safety Tips</a>
+      <a href="#">Shortest & Safest Path</a>
+      <a href="#">Place Ratings</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="auth-buttons">
+      <span id="auth-options"></span>
+    </div>
+  </header>
+
+  <!-- Script for handling login state -->
+  <script>
+    // Retrieve the stored username from local storage
+    const storedUsername = localStorage.getItem('loggedInUser');
+    const authOptions = document.getElementById('auth-options');
+
+    if (storedUsername) {
+      // If the user is logged in, display their username and logout option
+      authOptions.innerHTML = `
+        <span>Welcome, ${storedUsername}</span>
+        <button onclick="logout()">Logout</button>
+      `;
+    } else {
+      // If no user is logged in, display Login and Register buttons
+      authOptions.innerHTML = `
+        <button onclick="window.location.href='login_Page.html'">Login</button>
+        <button onclick="window.location.href='register.html'">Register</button>
+      `;
     }
-</style>
-  <h3>
-    <a href="Crime_index.html">
-    Place Crime Ratings</h3></a>
-    <p>Check safety ratings of places before visiting.</p>
+
+    // Logout function
+    function logout() {
+      // Clear the stored username from local storage
+      localStorage.removeItem('loggedInUser');
+      
+      // Redirect to the login page
+      window.location.href = 'login_Page.html';
+    }
+  </script>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Your Safety, Our Priority</h2>
+      <p>Providing real-time safety updates and shortest & safest routes for women travelers</p>
+      <button class="cta-btn">Explore Now</button>
+    </div>
   </div>
-  <div class="feature">
-    <h3>Emergency Response Features</h3>
-    <p>Emergency button connects you to local authorities instantly.</p>
-  </div>
-</section>
 
- <!--About Us Section-->
+  <!-- Core Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h3>Shortest & Safest Path Finder</h3>
+      <p>Get the safest routes based on real-time data.</p>
+    </div>
+    <div class="feature">
+      <a href="Crime_index.html">
+        <h3>Place Crime Ratings</h3>
+      </a>
+      <p>Check safety ratings of places before visiting.</p>
+    </div>
+    <div class="feature">
+      <h3>Emergency Response Features</h3>
+      <p>Emergency button connects you to local authorities instantly.</p>
+    </div>
+  </section>
 
-<section class="about">
-  <h3>About Us</h3>
-  <p>We are dedicated to enhancing women's safety while traveling solo by providing real-time safety updates and trusted information. Our mission is to ensure a safe and empowering travel experience for all women.</p>
-</section>
+  <!-- About Us Section -->
+  <section class="about">
+    <h3>About Us</h3>
+    <p>We are dedicated to enhancing women's safety while traveling solo by providing real-time safety updates and trusted information. Our mission is to ensure a safe and empowering travel experience for all women.</p>
+  </section>
 
-Contact Us Section 
-<section class="contact">
-  <h3>Contact Us</h3>
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" rows="4" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-<!-- Footer --> 
-<footer>
-  <p>&copy; 2024 TravelSafe. All rights reserved.</p>
-  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-</footer> -->
+  <!-- Contact Us Section -->
+  <section class="contact">
+    <h3>Contact Us</h3>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TravelSafe. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
 </body>
 </html>
