@@ -45,6 +45,40 @@ body {
     cursor: pointer;
   }
   
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.features .feature {
+    width: 30%; /* Adjust the width as needed */
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.features .feature img {
+    width: 80%; /* Makes the images responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+}
+
+.features .feature:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+.features h3 {
+    font-size: 24px;
+    color: #008080;
+}
+
+.features p {
+    font-size: 16px;
+}
+
+
   /* Hero Section */
   .hero {
     background-image: url('hero-banner.jpg');
